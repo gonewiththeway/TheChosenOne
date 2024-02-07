@@ -19,16 +19,16 @@ Shout out to the authors for their great work, also please consider giving a sta
 ## Getting Started
 
 ### Installation and Prerequisites
-Install diffuser `0.24.0.dev0`:
+Install diffuser `0.24.0`:
 ```
 git clone https://github.com/huggingface/diffusers
-cd diffusers
-pip install .
+cd diffusers 
+pip install diffusers==0.24.0
 ```
 
 Clone the repository and install the required packages:
 ```
-git clone git@github.com:ZichengDuan/TheChosenOne.git
+git clone https://github.com/gonewiththeway/TheChosenOne.git
 cd TheChosenOne
 pip install -r requirements.txt
 ```
