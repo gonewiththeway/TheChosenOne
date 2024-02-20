@@ -16,7 +16,8 @@ def config_2_args(path):
 
 args = config_2_args("config/princess.yaml")
 
-model_path = os.path.join(args.output_dir, args.character_name)
+loop = 0
+model_path = os.path.join(args.output_dir, args.character_name, str(loop))
 pipe = DiffusionPipeline.from_pretrained(model_path, torch_dtype=torch.float16)
 pipe.to("cuda")
 pipe.load_lora_weights(os.path.join(model_path, f"checkpoint-{args.checkpointing_steps * args.num_train_epochs}"))
