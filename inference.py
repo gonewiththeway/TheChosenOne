@@ -14,7 +14,7 @@ def config_2_args(path):
     args = parser.parse_args([])
     return args
 
-args = config_2_args("config/theChosenOne_fox.yaml")
+args = config_2_args("config/princess.yaml")
 
 loop = 1
 model_path = os.path.join(args.output_dir, args.character_name, str(loop))
@@ -22,7 +22,7 @@ pipe = DiffusionPipeline.from_pretrained(model_path, torch_dtype=torch.float16)
 pipe.to("cuda")
 pipe.load_lora_weights(os.path.join(model_path, f"checkpoint-{args.checkpointing_steps * args.num_train_epochs}"))
 
-prompt_postfix = input("Enter the postfix for anime_fox:")
+prompt_postfix = input("Enter the postfix for photo_man:")
 image_postfix = prompt_postfix.replace(" ", "_")
 
 # create folder
